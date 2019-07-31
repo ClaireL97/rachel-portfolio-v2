@@ -15,7 +15,7 @@ class CreateContactChannelsTable extends Migration
     {
         Schema::create('contact_channels', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned()->references('id')->on('users');
+            $table->bigInteger('user_id')->unsigned();
             $table->string('name', 64);
             $table->string('url');
             $table->string('icon_class', 64);

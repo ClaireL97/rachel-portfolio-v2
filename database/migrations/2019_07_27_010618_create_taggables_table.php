@@ -15,7 +15,7 @@ class CreateTaggablesTable extends Migration
     {
         Schema::create('taggables', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('tag_id')->unsigned()->references('id')->on('tags');
+            $table->bigInteger('tag_id')->unsigned();
             $table->bigInteger('taggable_id')->unsigned();
             $table->string('taggable_type');
             $table->unique(['tag_id', 'taggable_id', 'taggable_type']);

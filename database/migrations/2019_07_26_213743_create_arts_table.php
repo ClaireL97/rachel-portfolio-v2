@@ -15,7 +15,7 @@ class CreateArtsTable extends Migration
     {
         Schema::create('arts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned()->references('id')->on('users');
+            $table->bigInteger('user_id')->unsigned();
             $table->string('file');
             $table->string('title');
             $table->string('caption');
